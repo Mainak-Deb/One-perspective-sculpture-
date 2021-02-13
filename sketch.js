@@ -8,7 +8,7 @@ function setup() {
   createCanvas(1525, 700, WEBGL);
   textSize(100);
  
-  slider1 = createSlider(0, 3600, 2700);
+  slider1 = createSlider(0, 3650, 2700);
   slider1.position(5, 30);
   slider1.style('width', '160px');
 
@@ -17,7 +17,7 @@ function setup() {
   
 
   
-  slider2 = createSlider(600, 2000,1000);
+  slider2 = createSlider(600, 2050,2000);
   slider2.position(300, 30);
   slider2.style('width', '100px');
   
@@ -45,6 +45,7 @@ function draw() {
       bw=int(((0.299*c[0])+(0.587*c[1])+(0.114*c[2]))/3);
       noStroke();
       fill(bw,bw,bw);
+      ambientLight(bw,bw,bw);
       translate((i-(img.height/2))*((255-bw)/205)*2,(j-(img.width/2))*((255-bw)/205)*2,2*(bw*12+(d/2)));
       sphere((255-bw)/255*8);
       pop();
