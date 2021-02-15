@@ -38,8 +38,8 @@ function draw() {
   rotateY(a1);
   directionalLight(255,255,255, 0, 0, -1);
 
-  for (i = 0; i <= img.height-15; i=i+10) {
-    for (j = 0; j <= img.width-15; j=j+10) {
+  for (i = 0; i <= img.width-10; i=i+10) {
+    for (j = 0; j <= img.height-10; j=j+10) {
       push();
       c=img.get(i,j);
       bw=int(((0.299*c[0])+(0.587*c[1])+(0.114*c[2]))/3);
@@ -51,12 +51,5 @@ function draw() {
       pop();
     }
   }
-  push();
-
-  translate(0,800,0);
-  rotateX(85*3.14/180);
-  noStroke();
-  fill(255);
-  plane(1250, 1250);
-  pop();
+ 
 }
